@@ -1,6 +1,34 @@
 #ifndef __GAMETONES_H__
 #define __GAMETONES_H__
 
+#include "Pitches.h"
+
+toneNote enemyShootSound[] = {
+  toneNote(50, NOTE_F2),
+  toneNote(50, NOTE_AS2),
+  toneNote(50, NOTE_F2),
+  toneNote(50, NOTE_DS2),
+  toneEnd()
+};
+    
+toneNote playerShootSound[] = {
+  toneNote(50, NOTE_F3),
+  toneNote(50, NOTE_GS3),
+  toneNote(50, NOTE_G3),
+  toneNote(50, NOTE_FS3),
+  toneNote(50, NOTE_F3),
+  toneEnd()
+};
+
+toneNote playerWinSound[] = {
+  toneNote(150, NOTE_E4),
+  toneNote(150, NOTE_GS4),
+  toneNote(150, NOTE_B4),
+  toneNote(150, NOTE_GS4),
+  toneNote(150, NOTE_B4),
+  toneNote(300, NOTE_E5),
+  toneEnd()
+};
 
 /* Decreasing frequency with increasing length */
 toneNote playerDeathTone[] = {

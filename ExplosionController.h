@@ -14,7 +14,7 @@ struct Explosion {
   
   void Clear(boolean bDraw) { 
     if (lastRadius > 0 && bDraw) {
-      Display_FilledCircle(origin.x, origin.y, lastRadius + 1, 0, 0, 0); 
+      DisplayFilledCircle(origin.x, origin.y, lastRadius + 1, 0, 0, 0); 
     }
     bActive = createTime = lastRadius = origin.x = origin.y = 0; 
   }
@@ -32,7 +32,7 @@ struct Explosion {
   boolean Draw(time_t curTime) {
     if (lastRadius > 0) {
       // Clear last circle
-      Display_FilledCircle(origin.x, origin.y, lastRadius + 1, 0, 0, 0); 
+      DisplayFilledCircle(origin.x, origin.y, lastRadius + 1, 0, 0, 0); 
     }
     
     // Check for expiry
@@ -46,8 +46,8 @@ struct Explosion {
     int g = (int)(pctDelta * 200);
     int rad = (int)(pctDelta * 8);
     if (rad > 0) {
-      Display_Circle(origin.x, origin.y, rad, 255, g, 0); 
-      Display_Circle(origin.x, origin.y, rad + 1, 255, g + 50, 0); 
+      DisplayCircle(origin.x, origin.y, rad, 255, g, 0); 
+      DisplayCircle(origin.x, origin.y, rad + 1, 255, g + 50, 0); 
       lastRadius = rad;
     }
     return false;
